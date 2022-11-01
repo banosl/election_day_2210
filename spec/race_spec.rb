@@ -16,6 +16,12 @@ RSpec.describe Race do
         expect(race.office).to eq("Texas Governor")
     end 
 
+    it 'a race has an empty array for candidates as default' do
+        race = Race.new("Texas Governor")
+
+        expect(race.candidates).to eq([])
+    end
+
 
 
 end
