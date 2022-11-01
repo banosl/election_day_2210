@@ -42,7 +42,16 @@ RSpec.describe Race do
             race = Race.new("Texas Governor")
             candidate1 = race.register_candidate!({name: "Diana D", party: :democrat})
 
-            expect(canidate1.party).to eq(:democrat)
+            expect(candidate1.party).to eq(:democrat)
+        end
+    
+        it 'a race can register more than one candidate' do
+            race = Race.new("Texas Governor")
+            candidate1 = race.register_candidate!({name: "Diana D", party: :democrat})
+            candidate2 = race.register_candidate!({name: "Roberto R", party: :republican})
+            candidate3 = race.register_candidate!({name: "James P", party: :green_party})
+
+            expect(race.candidates).to eq([candidate1, candidate2, candidate3])
         end
     end
 
