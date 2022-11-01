@@ -22,7 +22,7 @@ RSpec.describe Candidate do
     end
 
     describe '#vote_for!' do
-        it 'candidate can cast a vote' do
+        it 'candidate can receive votes' do
             diana = Candidate.new ({name: "Diana D", party: :democrat})
 
             diana.vote_for!
