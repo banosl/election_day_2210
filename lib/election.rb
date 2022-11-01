@@ -24,7 +24,7 @@ class Election
                 {candidate.name => candidate.votes}
             end
         end
-        result.flatten
-        require 'pry';binding.pry
+        result.flatten!
+        result.reduce Hash.new, :merge
     end
 end
