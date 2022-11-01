@@ -27,6 +27,7 @@ RSpec.describe Race do
             race = Race.new("Texas Governor")
             candidate1 = race.register_candidate!({name: "Diana D", party: :democrat})
 
+            expect(candidate1).to be_instance_of(Candidate)
             expect(candidate1.class).to eq(Candidate)
         end
     end
