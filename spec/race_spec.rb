@@ -10,6 +10,11 @@ RSpec.describe Race do
         expect(race).to be_instance_of(Race)
     end
     
+    it 'race is for the office of Texas governor'
+        race = Race.new("Texas Governor")
+
+        expect(race.office).to eq("Texas Governor")
+    end 
 
 
 
