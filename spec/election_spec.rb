@@ -15,4 +15,10 @@ RSpec.describe Candidate do
         expect(diana.party).to eq(:democrat)
     end
 
+    it 'candidate has 0 votes as default' do
+        diana = Candidate.new ({name: "Diana D", party: :democrat})
+
+        expect(diana.votes).to eq(0)
+    end
+
 end
